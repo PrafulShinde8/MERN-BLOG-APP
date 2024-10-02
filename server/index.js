@@ -18,14 +18,14 @@ app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
 app.use(upload());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
-// Add a root route
-app.get('/', (req, res) => {
-  res.send('Welcome to the MERN Blog App API!');
-});
-
 // Use routes
 app.use('/api/users', userRoutes);
 app.use('/api/posts', postRoutes);
+
+// Welcome route
+app.get('/', (req, res) => {
+  res.send('Welcome to the MERN Blog App API!');
+});
 
 // Handle 404 errors
 app.use(notFound);
@@ -37,7 +37,8 @@ app.use(errorHandler);
 connect(process.env.MONGO_URI)
   .then(() => {
     console.log('Connected to MongoDB');
-    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    app.listen(process.env.PORT || 5000, () => console.log
+    (`Server running on port ${process.env.PORT}`));
   })
   .catch((error) => {
     console.error('Error connecting to MongoDB:', error);
