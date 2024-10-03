@@ -1,4 +1,4 @@
-MERN Blog App
+MERN-BLOG-APP
 
 Description
 
