@@ -16,7 +16,7 @@ const PostAuthor = ({authorID, createdAt}) => {
   useEffect(() => {
     const getAuthor = async () => {
      try {
-      const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/users/${authorID}`)
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/users/${authorID}`)
      setAuthor(response?.data);
     } catch (error) {
       console.log(error)
@@ -27,7 +27,7 @@ const PostAuthor = ({authorID, createdAt}) => {
   return (
    <Link to={`/posts/users/${authorID}`} className='post__author'>
      <div className="post__author-avatar">
-     <img src={`${process.env.REACT_APP_ASSETS_URL}/uploads/${author?.avatar}`} alt="" />
+     <img src={`${process.env.REACT_APP_API_URL}/uploads/${author?.avatar}`} alt="" />
      </div>
      <div className="post__author-details">
          <h5>By: {author?.name}</h5>
