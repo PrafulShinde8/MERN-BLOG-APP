@@ -7,7 +7,9 @@ The MERN Blog App is a full-stack web application built using the MERN (MongoDB,
 Features
 
 1.User Authentication: Secure registration and login with JWT-based authentication.
+
 2.Create, Edit, and Delete Posts: Logged-in users can manage their blog posts.
+
 3.Categories: Posts are divided into categories, allowing users to filter and view content easily.
 Profile Management: Users can update their personal details and change their avatar or profile photo.
 Author Insights: View authors and the number of posts by each author.
