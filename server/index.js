@@ -16,9 +16,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // CORS configuration
-const frontendOrigin = process.env.FRONTEND_URL || "http://localhost:3000"; // Fallback to localhost during development
-app.use(cors({ credentials: true, origin: frontendOrigin }));
-
+// const frontendOrigin = process.env.FRONTEND_URL || "http://localhost:3000"; 
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+// Fallback to localhost during development
+// app.use(cors({ credentials: true, origin: frontendOrigin }));
+app.use(cors(
+  { origin: ["http"],
+   methods: ["POST", "GET"],
+   credentials: true
+  }
+  ));
+app.use(express.json())
 app.use(upload());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
