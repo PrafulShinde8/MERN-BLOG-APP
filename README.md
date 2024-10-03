@@ -11,23 +11,35 @@ Features
 2.Create, Edit, and Delete Posts: Logged-in users can manage their blog posts.
 
 3.Categories: Posts are divided into categories, allowing users to filter and view content easily.
-Profile Management: Users can update their personal details and change their avatar or profile photo.
-Author Insights: View authors and the number of posts by each author.
-Responsive Design: Optimized for desktops, tablets, and mobile devices.
-Image Upload: Users can upload profile images (avatars).
-Post Pagination: Posts are displayed with pagination for better performance.
-Real-time Data Interaction: Fetch, update, and delete posts interactively using a backend API.
-User-friendly Interface: Clean and minimalistic design for ease of use.
+
+4.Profile Management: Users can update their personal details and change their avatar or profile photo.
+
+5.Author Insights: View authors and the number of posts by each author.
+
+6.Responsive Design: Optimized for desktops, tablets, and mobile devices.
+
+7.Image Upload: Users can upload profile images (avatars).
+
+8.Post Pagination: Posts are displayed with pagination for better performance.
+
+9.Real-time Data Interaction: Fetch, update, and delete posts interactively using a backend API.
+
+10.User-friendly Interface: Clean and minimalistic design for ease of use.
 
 Live Demo/ Deployed Link 
- https://mern-blog-nine-teal.vercel.app/
+
+https://mern-blog-nine-teal.vercel.app/
 
 Technologies Used
 
 Frontend: React, Axios
+
 Backend: Node.js, Express
+
 Database: MongoDB, Mongoose
+
 Authentication: JWT (JSON Web Tokens)
+
 Styling: CSS/SCSS or any CSS framework (e.g., Material-UI, Bootstrap)
 
 Getting Started
