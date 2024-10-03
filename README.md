@@ -1,6 +1,6 @@
-#MERN Blog App
+MERN Blog App
 
-#Description
+Description
 
 The MERN Blog App is a full-stack web application built using the MERN (MongoDB, Express, React, Node.js) stack. This application allows users to create and manage blog posts, offering a platform for sharing ideas and stories. Posts are categorized, enabling users to filter and view content by specific categories easily. Users can click on a category to see all related posts and authors, as well as the number of posts by each author. The app features user authentication for secure access, allowing users to register, log in, and manage their profiles, including changing their avatar or profile photo. With a responsive design and real-time data interaction, this app provides a seamless experience across devices, making it an excellent choice for developers and anyone interested in blogging.
 
@@ -18,7 +18,7 @@ Real-time Data Interaction: Fetch, update, and delete posts interactively using 
 User-friendly Interface: Clean and minimalistic design for ease of use.
 
 #Live Demo
- [MERN Blog App](https://mern-blog-nine-teal.vercel.app)
+ https://mern-blog-nine-teal.vercel.app/
 
 #**Technologies Used**
 
