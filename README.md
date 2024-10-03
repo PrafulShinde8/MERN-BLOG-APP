@@ -1,14 +1,14 @@
-#MERN Blog App
+MERN Blog App
 
 Description
 
 The MERN Blog App is a full-stack web application built using the MERN (MongoDB, Express, React, Node.js) stack. This application allows users to create and manage blog posts, offering a platform for sharing ideas and stories. Posts are categorized, enabling users to filter and view content by specific categories easily. Users can click on a category to see all related posts and authors, as well as the number of posts by each author. The app features user authentication for secure access, allowing users to register, log in, and manage their profiles, including changing their avatar or profile photo. With a responsive design and real-time data interaction, this app provides a seamless experience across devices, making it an excellent choice for developers and anyone interested in blogging.
 
-#Features
+Features
 
-User Authentication: Secure registration and login with JWT-based authentication.
-Create, Edit, and Delete Posts: Logged-in users can manage their blog posts.
-Categories: Posts are divided into categories, allowing users to filter and view content easily.
+1.User Authentication: Secure registration and login with JWT-based authentication.
+2.Create, Edit, and Delete Posts: Logged-in users can manage their blog posts.
+3.Categories: Posts are divided into categories, allowing users to filter and view content easily.
 Profile Management: Users can update their personal details and change their avatar or profile photo.
 Author Insights: View authors and the number of posts by each author.
 Responsive Design: Optimized for desktops, tablets, and mobile devices.
@@ -17,10 +17,10 @@ Post Pagination: Posts are displayed with pagination for better performance.
 Real-time Data Interaction: Fetch, update, and delete posts interactively using a backend API.
 User-friendly Interface: Clean and minimalistic design for ease of use.
 
-#Live Demo/ Deployed Link 
+Live Demo/ Deployed Link 
  https://mern-blog-nine-teal.vercel.app/
 
-#**Technologies Used**
+Technologies Used
 
 Frontend: React, Axios
 Backend: Node.js, Express
@@ -28,9 +28,9 @@ Database: MongoDB, Mongoose
 Authentication: JWT (JSON Web Tokens)
 Styling: CSS/SCSS or any CSS framework (e.g., Material-UI, Bootstrap)
 
-#**Getting Started**
+Getting Started
 
-##**Prerequisites**
+Prerequisites
 
 Ensure that you have the following installed:
 
@@ -44,15 +44,16 @@ Clone the repository:
 git clone https://github.com/your-username/mern-blog-app.git
 cd mern-blog-app
 Install dependencies for both the backend and frontend:
-# Backend
+
+Backend
 cd backend
 npm install
 
-# Frontend
+Frontend
 cd ../client
 npm install
 
-#**Set up environment variables:**
+Set up environment variables:
 
 Create a .env file in both the backend and client directories.
 
