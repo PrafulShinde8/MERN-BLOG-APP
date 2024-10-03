@@ -51,7 +51,7 @@ Ensure that you have the following installed:
 Node.js
 MongoDB (locally or using a cloud service like MongoDB Atlas)
 
-#Installation
+Installation
 
 Clone the repository:
 
@@ -132,29 +132,43 @@ API Endpoints
 User Routes
 
 POST /api/users/register – Register a new user
+
 POST /api/users/login – Login a user
+
 PATCH /api/users/edit-user - Edit User
+
 GET /api/users - Get User Profile
+
 GET /api/users/author - Get Authors
+
 PATCH /api/users/edit-user - Edit User Details
 
 Post Routes
 
 POST /api/posts – Create a new post
+
 GET /api/posts – Get all posts
+
 GET /api/posts/:id – Get a single post by ID
+
 GET /api/posts/categories - Get Post by Category
+
 GET /api/posts/users:id - Get user post by ID
+
 PATCH /api/posts/:id - Edit Post by ID
+
 DELETE /api/posts/:id – Delete a post by ID
 
 Deployment
 
 To deploy this app:
+
 Push the code to a GitHub repository.
+
 Deploy the frontend (React app) on a service like Vercel or Netlify.
 Deploy the backend (Node.js server) on a platform like Heroku or Render.
 Set up environment variables on the respective deployment platforms.
 
 License
+
 This project is licensed under the MIT License.
