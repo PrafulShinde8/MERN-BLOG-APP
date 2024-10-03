@@ -1,4 +1,4 @@
-MERN Blog App
+#**MERN Blog App**
 
 Description
 
@@ -17,7 +17,7 @@ Post Pagination: Posts are displayed with pagination for better performance.
 Real-time Data Interaction: Fetch, update, and delete posts interactively using a backend API.
 User-friendly Interface: Clean and minimalistic design for ease of use.
 
-#Live Demo
+#Live Demo/ Deployed Link 
  https://mern-blog-nine-teal.vercel.app/
 
 #**Technologies Used**
@@ -59,18 +59,17 @@ Create a .env file in both the backend and client directories.
 Backend (backend/.env):
 
 Node.js
-MongoDB (locally or using a cloud service like MongoDB Atlas)
+MongoDB (locally or using a cloud service like MongoDB Atlas
+
 Installation
+
 Clone the repository:
 
-bash
-Copy code
 git clone https://github.com/your-username/mern-blog-app.git
 cd mern-blog-app
+
 Install dependencies for both the backend and frontend:
 
-bash
-Copy code
 # Backend
 cd backend
 npm install
@@ -78,28 +77,29 @@ npm install
 # Frontend
 cd ../client
 npm install
+
 Set up environment variables:
 
 Create a .env file in both the backend and client directories.
 
-Backend (backend/.env):
+Backend (server/.env):
 
-plaintext
-Copy code
-MONGO_URI=your_mongo_db_connection_string
-JWT_SECRET=your_jwt_secret_key
-PORT=your_preferred_port
+MONGO_URI=mongodb+srv://PrafulShinde:87GoXqdrSEd3Ya1X@praful-cluster.jqwtt.mongodb.net/MERN-BLOG-APP
+PORT=5000
+JWT_SECRET = aweffffwefe23324esfdsdf
+CLIENT_URL=https://mern-blog-nine-teal.vercel.app
+
 Frontend (client/.env):
+REACT_APP_BASE_URL_1="http://localhost:5000/api"
+REACT_APP_ASSETS_URL_1="http://localhost:5000"
+REACT_APP_API_URL="https://mern-blog-app-tltf.onrender.com/api"
+REACT_APP_ASSETS_URL="https://mern-blog-app-tltf.onrender.com"
 
-plaintext
-Copy code
-REACT_APP_API_URL=your_backend_api_url
+
 Start the development servers:
 
 In two separate terminal windows, run the following commands:
 
-bash
-Copy code
 # Backend server
 cd backend
 npm start
@@ -107,42 +107,39 @@ npm start
 # Frontend server
 cd ../client
 npm start
+
 Visit the app in your browser:
 
 The frontend will run at http://localhost:3000, and the backend at http://localhost:5000.
 
 API Endpoints
+
 User Routes
+
 POST /api/users/register – Register a new user
-POST /api/users/login – Log in a user
-PUT /api/users/profile – Update user profile
+POST /api/users/login – Login a user
+PATCH /api/users/edit-user - Edit User
+GET /api/users - Get User Profile
+GET /api/users/author - Get Authors
+PATCH /api/users/edit-user - Edit User Details
+
 Post Routes
-GET /api/posts – Get all posts
+
 POST /api/posts – Create a new post
+GET /api/posts – Get all posts
 GET /api/posts/:id – Get a single post by ID
-PUT /api/posts/:id – Update a post by ID
+GET /api/posts/categories - Get Post by Category
+GET /api/posts/users:id - Get user post by ID
+PATCH /api/posts/:id - Edit Post by ID
 DELETE /api/posts/:id – Delete a post by ID
-Environment Variables
-This project requires environment variables for both the backend and frontend. Below are the required variables for each.
 
-Backend (Server)
-In the backend directory, create a .env file and add the following:
-
-plaintext
-Copy code
-MONGO_URI=your_mongo_db_connection_string
-JWT_SECRET=your_jwt_secret_key
-PORT=your_preferred_port
-Frontend (Client)
-In the client directory, create a .env file and add the following:
-
-plaintext
-Copy code
-REACT_APP_API_URL=your_backend_api_url
 Deployment
-To deploy this app:
 
+To deploy this app:
 Push the code to a GitHub repository.
 Deploy the frontend (React app) on a service like Vercel or Netlify.
 Deploy the backend (Node.js server) on a platform like Heroku or Render.
 Set up environment variables on the respective deployment platforms.
+
+License
+This project is licensed under the MIT License.
