@@ -223,7 +223,7 @@ const changeAvatar = async (req, res, next) => {
 
         })
     } catch (error) {
-        return next(new HttpError(err))
+        return next(new HttpError(error))
     }
 }
            // Ensure the directory exists
