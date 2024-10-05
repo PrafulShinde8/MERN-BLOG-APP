@@ -18,7 +18,7 @@ const PostDetail = () => {
     const getPost = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/posts/${id}`);
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/posts/${id}`);
         setPost(response.data)
         // setcreatorID(response.data.creator)
       } catch (error) {

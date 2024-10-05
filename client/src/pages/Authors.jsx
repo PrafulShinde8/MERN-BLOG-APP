@@ -11,7 +11,7 @@ const Authors = () => {
   const getAuthors = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/users`)
+      const response = await axios.get(`${process.env.REACT_APP_API_URL}/users`)
       setAuthors(response.data)
     } catch (error) {
       console.log(error)
