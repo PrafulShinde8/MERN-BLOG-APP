@@ -156,9 +156,3 @@ const UserProfile = () => {
 }
 
 export default UserProfile
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> b3f92cb8f245ef1e85903a1f8b4381f9fa272a87
