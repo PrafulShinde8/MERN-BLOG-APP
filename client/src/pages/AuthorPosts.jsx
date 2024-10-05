@@ -38,7 +38,7 @@ return (
    
   </section>
 );
-//   const [posts, setPosts] = useState(DUMMY_POSTS)
+
 }
 
 export default AuthorPosts
