@@ -30,7 +30,7 @@ Features
 
 Live Demo/ Deployed Link 
 
-https://mern-blog-nine-teal.vercel.app/
+https://glittery-zabaione-69d96f.netlify.app/
 
 
 Technologies Used
