@@ -30,7 +30,7 @@ Features
 
 Live Demo/ Deployed Link 
 
-https://glittery-zabaione-69d96f.netlify.app/
+https://mern-blog-app-69d96f.netlify.app
 
 
 Technologies Used
