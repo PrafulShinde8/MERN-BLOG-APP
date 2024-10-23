@@ -38,5 +38,3 @@ const PostAuthor = ({authorID, createdAt}) => {
 }
 
 export default PostAuthor
-
-

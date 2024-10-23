@@ -28,9 +28,10 @@ const Authors = () => {
     {authors.length > 0 ? <div className="container authors__container">
       {
         authors.map(({_id: id, avatar, name, posts}) => {
-          return <Link to={`/posts/users/${id}`} className='author'>
+          return <Link to={`/posts/users/${id}`} className='author'key={id}>
             <div className="author__avatar">
-            <img src={`${process.env.REACT_APP_ASSETS_URL}/uploads/${avatar}`} alt={`Image of ${name}`} />
+            {/* <img src={`${process.env.REACT_APP_ASSETS_URL}/uploads/${avatar}`} alt={`Image of ${name}`} /> */}
+            <img src={`${process.env.REACT_APP_ASSETS_URL}/uploads/${avatar}`} alt= {name}/>
             </div>
             <div className="author__info">
               <h4>{name}</h4>

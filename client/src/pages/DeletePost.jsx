@@ -1,44 +1,57 @@
-import React,{useState, useContext, useEffect} from 'react'
+import React, { useState, useContext, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { UserContext } from '../context/userContext';
 import axios from 'axios';
 import Loader from '../components/Loader';
-const DeletePost = ({postId: id}) => {
+
+const DeletePost = ({ postId }) => {
   const navigate = useNavigate();
-  const location = useLocation()
-  const [isLoading, setIsLoading] = useState(false)
-  const {currentUser} = useContext(UserContext)
+  const location = useLocation();
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+  const { currentUser } = useContext(UserContext);
   const token = currentUser?.token;
 
-  //redirect to login page for any user who isn't logged in
-  useEffect(() => { 
-    if(!token) {
-      navigate('/login')
+  // Redirect to login page for any user who isn't logged in
+  useEffect(() => {
+    if (!token) {
+      navigate('/login');
     }
-  }, [])
+  }, [token, navigate]);
 
   const removePost = async () => {
-    setIsLoading(true)
+    setIsLoading(true);
+    setError(''); // Clear previous errors
     try {
-      const response= await axios.delete(`${process.env.REACT_APP_API_URL}/posts/${id}`, {withCredentials: true, headers: {Authorization: `Bearer ${token}`}})
-      if(response.status ==200) {
-        if(location.pathname == `/myposts/${currentUser.id}`){
-          navigate(0)
+      const response = await axios.delete(`${process.env.REACT_APP_API_URL}/posts/${postId}`, {
+        withCredentials: true,
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (response.status === 200) {
+        if (location.pathname === `/myposts/${currentUser.id}`) {
+          navigate(0); // Reload the current page
         } else {
-          navigate('/')
+          navigate('/'); // Redirect to home
         }
       }
-      setIsLoading(false)
     } catch (error) {
-      console.log("Couldn't delete post")
+      setError("Couldn't delete post");
+      console.error(error);
+    } finally {
+      setIsLoading(false); // Ensure loading state is reset
     }
-  }
-  if(isLoading) {
-    return <Loader/>
-  }
-  return (
-    <Link className='btn sm danger' onClick={() => removePost(id)}>Delete</Link>
-  )
-}
+  };
 
-export default DeletePost
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  return (
+    <>
+      {error && <p className="form__error-message">{error}</p>}
+      <Link className="btn sm danger" onClick={removePost}>Delete</Link>
+    </>
+  );
+};
+
+export default DeletePost;
