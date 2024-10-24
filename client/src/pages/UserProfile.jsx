@@ -26,7 +26,7 @@ const UserProfile = () => {
   useEffect(() => {
     const getUser = async () => {
       try {
-        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/users/${currentUser.id}`, {
+        const response = await axios.get(`${process.env.REACT_APP_API_URL}/users/${currentUser.id}`, {
           withCredentials: true,
           headers: { Authorization: `Bearer ${token}` },
         });
