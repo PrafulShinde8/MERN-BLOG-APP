@@ -48,7 +48,7 @@ const UserProfile = () => {
     try {
       const postData = new FormData();
       postData.set('avatar', avatar);
-      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/users/change-avatar`, postData, {
+      const response = await axios.post(`${process.env.REACT_APP_API_URL}/users/change-avatar`, postData, {
         withCredentials: true,
         headers: { Authorization: `Bearer ${token}` },
       });
