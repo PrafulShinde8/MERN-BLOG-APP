@@ -38,6 +38,12 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
+// Set Content Security Policy
+app.use((req, res, next) => {
+  res.setHeader("Content-Security-Policy", "script-src 'self' 'unsafe-eval'");
+  next();
+});
+
 app.use(upload());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
