@@ -14,9 +14,26 @@ const PORT = process.env.PORT || 5000;
 // Middleware setup
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// CORS setup to allow localhost and the production URL from .env
+const allowedOrigins = [
+  'http://localhost:3000', 
+  process.env.CLIENT_URL 
+];
+
 app.use(cors({
   credentials: true,
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    // Check if the request's origin is in the allowed list
+    if (allowedOrigins.indexOf(origin) === -1) {
+      const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+      return callback(new Error(msg), false);
+    }
+    return callback(null, true);
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 }));
@@ -24,7 +41,7 @@ app.use(cors({
 app.use(upload());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
-// Add a root route
+
 app.get('/', (req, res) => {
   res.send('Welcome to the MERN Blog App API!');
 });
@@ -48,3 +65,4 @@ connect(process.env.MONGO_URI)
   .catch((error) => {
     console.error('Error connecting to MongoDB:', error);
   });
+
