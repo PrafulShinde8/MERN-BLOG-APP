@@ -111,7 +111,7 @@ Backend (server/.env):
 MONGO_URI=mongodb+srv://PrafulShinde:87GoXqdrSEd3Ya1X@praful-cluster.jqwtt.mongodb.net/MERN-BLOG-APP
 PORT=5000
 JWT_SECRET = aweffffwefe23324esfdsdf
-CLIENT_URL=https://mern-blog-nine-teal.vercel.app
+CLIENT_URL="https://mern-blog-app-69d96f.netlify.app"
 
 Frontend (client/.env):
 REACT_APP_BASE_URL_1="http://localhost:5000/api"
