@@ -21,7 +21,7 @@ const EditPost = () => {
     if(!token) {
       navigate('/login')
     }
-  }, [])
+  }, [navigate, token])
 
 
   const modules = {
@@ -57,7 +57,7 @@ const EditPost = () => {
       }
      }
      getPost();
-   },[])
+   },[id])
    
 
    const editPost = async (e) => {
@@ -71,7 +71,7 @@ const EditPost = () => {
       
       try {
         const response = await axios.patch(`${process.env.REACT_APP_API_URL}/posts/${id}`, postData, {withCredentials: true, headers: {Authorization: `Bearer ${token}`}})
-        if(response.status ==200) {
+        if(response.status ===200) {
           return navigate('/')
         }
       } catch (err) {
