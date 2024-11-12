@@ -8,7 +8,7 @@ const Logout = () => {
 
 useEffect(() => {
   setCurrentUser(null); // Clear the current user context
-  navigate('/');   // Redirect to the login page
+  navigate('/login');   // Redirect to the login page
 }, [setCurrentUser, navigate]);
 
 return null; // Return null instead of an empty fragment
